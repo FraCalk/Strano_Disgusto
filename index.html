@@ -9,62 +9,14 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <div class="page-shell">
-      <aside class="sidebar">
-        <div class="brand">
-          <div class="brand-mark">S</div>
-          <div>
-            <h1>Stranezza</h1>
-            <p>Insight Dashboard</p>
-          </div>
-        </div>
-        <nav class="nav-menu">
-          <a href="#" class="nav-item active">Panoramica</a>
-          <a href="#" class="nav-item">Analisi</a>
-          <a href="#" class="nav-item">Trend</a>
-          <a href="#" class="nav-item">Report</a>
-        </nav>
-      </aside>
-
-      <main class="content">
-        <header class="topbar">
-          <div>
-            <p class="eyebrow">Dashboard professionale</p>
-            <h2>Visualizzazione dati strategica</h2>
-          </div>
-          <button class="cta-button">Esporta PDF</button>
-        </header>
-
-        <section class="summary-grid">
-          <article class="metric-card">
-            <span>Utenti attivi</span>
-            <strong>8.764</strong>
-          </article>
-          <article class="metric-card">
-            <span>Crescita mensile</span>
-            <strong>+14.7%</strong>
-          </article>
-          <article class="metric-card">
-            <span>Tasso di conversione</span>
-            <strong>6.2%</strong>
-          </article>
-        </section>
-
-        <section class="chart-panel">
-          <div class="panel-header">
-            <div>
-              <h3>Stranezza vs Disgustosità</h3>
-              <p>Ogni punto rappresenta una combinazione di valore sul grafico.</p>
-            </div>
-            <div class="legend">
-              <span class="legend-badge legend-primary">Osservazioni</span>
-            </div>
-          </div>
-          <div class="chart-wrapper">
-            <canvas id="trendChart" aria-label="Grafico Stranezza contro Disgustosità" role="img"></canvas>
-          </div>
-        </section>
-      </main>
+    <div class="container">
+      <div class="chart-header">
+        <h1>Stranezza VS Disgusto</h1>
+        <p>Chi è messo peggio?</p>
+      </div>
+      <div class="chart-wrapper">
+        <canvas id="trendChart" aria-label="Grafico Stranezza contro Disgustosità" role="img"></canvas>
+      </div>
     </div>
   </body>
 </html>

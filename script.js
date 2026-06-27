@@ -1,16 +1,16 @@
 const ctx = document.getElementById("trendChart").getContext("2d");
 
 const dataPoints = [
-  { x: 2.1, y: 8.3 },
-  { x: 3.5, y: 6.1 },
-  { x: 4.2, y: 7.8 },
-  { x: 5.0, y: 4.6 },
-  { x: 5.8, y: 6.9 },
-  { x: 6.4, y: 9.2 },
-  { x: 7.1, y: 8.8 },
-  { x: 8.0, y: 5.3 },
-  { x: 8.7, y: 7.7 },
-  { x: 9.3, y: 9.5 },
+  { x: 2.1, y: 8.3, name: "Persona 1" },
+  { x: 3.5, y: 6.1, name: "Persona 2" },
+  { x: 4.2, y: 7.8, name: "Persona 3" },
+  { x: 5.0, y: 4.6, name: "Persona 4" },
+  { x: 5.8, y: 6.9, name: "Persona 5" },
+  { x: 6.4, y: 9.2, name: "Persona 6" },
+  { x: 7.1, y: 8.8, name: "Persona 7" },
+  { x: 8.0, y: 5.3, name: "Persona 8" },
+  { x: 8.7, y: 7.7, name: "Persona 9" },
+  { x: 9.3, y: 9.5, name: "Persona 10" },
 ];
 
 new Chart(ctx, {
@@ -44,6 +44,9 @@ new Chart(ctx, {
         borderColor: "rgba(148, 163, 184, 0.24)",
         borderWidth: 1,
         callbacks: {
+          title: (context) => {
+            return context[0].raw.name;
+          },
           label: (context) => {
             const xValue = context.parsed.x;
             const yValue = context.parsed.y;
