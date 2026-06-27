@@ -248,6 +248,37 @@ textarea {
   font-size: 2rem;
 }
 
+.descriptions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  margin-top: 20px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+}
+
+.description-section {
+  background: rgba(23, 35, 61, 0.5);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.description-section h3 {
+  margin: 0 0 12px;
+  color: var(--accent);
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.description-section p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
 .chart-panel {
   background: rgba(23, 35, 61, 0.94);
   border: 1px solid var(--border);
