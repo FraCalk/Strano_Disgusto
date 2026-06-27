@@ -256,6 +256,29 @@ canvas {
   }
 }
 
+@media (max-width: 768px) {
+  .container {
+    padding: 24px 16px;
+    gap: 20px;
+  }
+
+  .chart-header h1 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
+  }
+
+  .chart-header p {
+    font-size: 1rem;
+  }
+
+  .chart-wrapper {
+    min-height: 300px;
+  }
+
+  canvas {
+    max-height: 300px;
+  }
+}
+
 @media (max-width: 640px) {
   .sidebar {
     padding: 24px;
@@ -268,5 +291,27 @@ canvas {
 
   .cta-button {
     width: 100%;
+  }
+
+  .container {
+    padding: 16px 12px;
+    gap: 16px;
+  }
+
+  .chart-header h1 {
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  }
+
+  .chart-header p {
+    font-size: 0.95rem;
+    margin-top: 8px;
+  }
+
+  .chart-wrapper {
+    min-height: 250px;
+  }
+
+  canvas {
+    max-height: 250px;
   }
 }
