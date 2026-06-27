@@ -59,6 +59,8 @@ new Chart(ctx, {
       x: {
         type: "linear",
         position: "bottom",
+        min: 0,
+        max: 10,
         title: {
           display: true,
           text: "Stranezza",
@@ -72,9 +74,12 @@ new Chart(ctx, {
         },
         ticks: {
           color: "#cbd5e1",
+          stepSize: 1,
         },
       },
       y: {
+        min: 0,
+        max: 10,
         title: {
           display: true,
           text: "Disgustosità",
@@ -89,18 +94,15 @@ new Chart(ctx, {
         },
         ticks: {
           color: "#cbd5e1",
+          stepSize: 1,
         },
       },
     },
   },
 });
 
-const topStrange = [...dataPoints]
-  .sort((a, b) => b.x - a.x)
-  .slice(0, 3);
-const topDisgusting = [...dataPoints]
-  .sort((a, b) => b.y - a.y)
-  .slice(0, 3);
+const topStrange = [...dataPoints].sort((a, b) => b.x - a.x);
+const topDisgusting = [...dataPoints].sort((a, b) => b.y - a.y);
 
 document.getElementById("mostStrangeList").innerHTML = topStrange
   .map(
