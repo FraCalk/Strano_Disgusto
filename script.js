@@ -94,3 +94,24 @@ new Chart(ctx, {
     },
   },
 });
+
+const topStrange = [...dataPoints]
+  .sort((a, b) => b.x - a.x)
+  .slice(0, 3);
+const topDisgusting = [...dataPoints]
+  .sort((a, b) => b.y - a.y)
+  .slice(0, 3);
+
+document.getElementById("mostStrangeList").innerHTML = topStrange
+  .map(
+    (point) =>
+      `<li><span>${point.name}</span><strong>Stranezza ${point.x}</strong></li>`
+  )
+  .join("");
+
+document.getElementById("mostDisgustingList").innerHTML = topDisgusting
+  .map(
+    (point) =>
+      `<li><span>${point.name}</span><strong>Disgustosità ${point.y}</strong></li>`
+  )
+  .join("");

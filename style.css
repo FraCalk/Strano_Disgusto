@@ -52,6 +52,66 @@ body {
   font-size: 1.1rem;
 }
 
+.rankings {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.rank-card {
+  background: rgba(23, 35, 61, 0.92);
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 24px;
+  padding: 24px;
+  text-align: center;
+}
+
+.rank-label {
+  margin: 0 0 10px;
+  display: block;
+  color: var(--accent);
+  font-size: 0.95rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.rank-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.rank-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  background: rgba(15, 23, 42, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 18px;
+  color: var(--text);
+}
+
+.rank-list li::before {
+  content: counter(item);
+  counter-increment: item;
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-radius: 999px;
+  font-weight: 700;
+  margin-right: 12px;
+}
+
+.rank-list {
+  counter-reset: item;
+}
+
 button,
 input,
 textarea {
