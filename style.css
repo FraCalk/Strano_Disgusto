@@ -1,4 +1,5 @@
 :root {
+  /* Imposta i colori base e i token del tema dark usati in tutto il sito. */
   color-scheme: dark;
   --bg: #0f172a;
   --surface: #17233d;
@@ -28,6 +29,7 @@ body {
 }
 
 .container {
+  /* Definisce il layout principale del contenitore centrale della pagina. */
   width: 100%;
   max-width: 900px;
   padding: 40px;
@@ -53,6 +55,7 @@ body {
 }
 
 .rankings {
+  /* Organizza le due classifiche in una griglia a due colonne. */
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 18px;
@@ -249,6 +252,7 @@ textarea {
 }
 
 .descriptions {
+  /* Dispone le due descrizioni sotto il grafico in colonne separate. */
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 24px;
@@ -336,6 +340,7 @@ canvas {
   max-height: 420px;
 }
 
+/* Regole responsive per schermi medi e piccoli. */
 @media (max-width: 990px) {
   .page-shell {
     grid-template-columns: 1fr;
@@ -348,8 +353,12 @@ canvas {
 }
 
 @media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+  }
+
   .container {
-    padding: 24px 16px;
+    padding: 24px 16px 32px;
     gap: 20px;
   }
 
@@ -359,6 +368,36 @@ canvas {
 
   .chart-header p {
     font-size: 1rem;
+  }
+
+  .rankings,
+  .descriptions {
+    grid-template-columns: 1fr;
+  }
+
+  .rank-card,
+  .description-section {
+    padding: 18px;
+  }
+
+  .rank-list li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 12px 14px;
+  }
+
+  .rank-list li::before {
+    margin-right: 0;
+  }
+
+  .rank-list li span {
+    width: 100%;
+  }
+
+  .rank-list li strong {
+    font-size: 0.95rem;
+    line-height: 1.4;
   }
 
   .chart-wrapper {
@@ -385,8 +424,17 @@ canvas {
   }
 
   .container {
-    padding: 16px 12px;
+    padding: 16px 12px 24px;
     gap: 16px;
+  }
+
+  .rank-label {
+    font-size: 0.74rem;
+    letter-spacing: 0.1em;
+  }
+
+  .description-section p {
+    font-size: 0.9rem;
   }
 
   .chart-header h1 {
